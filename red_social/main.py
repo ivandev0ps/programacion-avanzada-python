@@ -22,6 +22,8 @@ def main():
     print(manolo)
     
     print(pepe == manolo)
+
+    print("test")
     
     
 if __name__ == "__main__":
