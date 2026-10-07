@@ -1,34 +1,35 @@
-#from red_social.publicacion import Respuesta, Retweet, Tweet
-#from red_social.red import RedSocial
+# from red_social.publicacion import Respuesta, Retweet, Tweet
+# from red_social.red import RedSocial
 
 from red_social.usuario import Usuario
 
+
 def main():
-    
-    pepe = Usuario("Pepe","pepe")
-    manolo = Usuario("Manolo","@pepe")
-    venancio = Usuario("Venancio","venancio")
-    
+
+    pepe = Usuario("Pepe", "pepe")
+    manolo = Usuario("Manolo", "@pepe")
+    venancio = Usuario("Venancio", "venancio")
+
     print(pepe.alias)
     print(manolo.alias)
-    
+
     pepe.seguir(manolo)
-    
+
     print(pepe.numero_seguidos)
     print(pepe.sigue_a(manolo))
     print(pepe.sigue_a(venancio))
-    
+
     print(pepe)
     print(manolo)
-    
+
     print(pepe == manolo)
 
     print("test")
-    
-    
+
+
 if __name__ == "__main__":
     main()
-    
+
 
 """
 def main():
@@ -67,5 +68,3 @@ def main():
     for hashtag, veces in red.tendencias(2):
         print(f"  {hashtag} ({veces})")
 """
-
-
