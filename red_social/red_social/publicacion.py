@@ -30,3 +30,12 @@ class Publicacion:
     @abstractmethod
     def __str__(self):
         pass
+
+class Twitter(Publicacion):
+
+    def __init__(self, autor, texto):
+        super().__init__(autor, texto)
+
+    @abstractmethod
+    def __str__(self):
+        return f"{self.autor.alias}: {self.texto}"
