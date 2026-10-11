@@ -21,7 +21,7 @@ def main():
     # 3. Publicaciones de tres tipos distintos
     ana, luis, marta = red["@ana"], red["@luis"], red["@marta"]
     hola = red.publicar(Tweet(ana, "Hola a todos #python #pytest"))
-    red.publicar(Respuesta(luis, "¡Bienvenida! #Python", hola))
+    red.publicar(Respuesta(luis, "¡Bienvenida! #python", hola))
     red.publicar(Retweet(marta, hola))
     red.publicar(Tweet(pablo, "Mi primer tweet #hola"))
 
