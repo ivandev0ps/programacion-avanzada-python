@@ -23,8 +23,8 @@ class Publicacion(ABC):
     def extraer_hashtags(texto):
         signos = r"[,.;:!?¡¿]"
         hashtags = [
-            palabra for palabra in texto.split() 
-            if palabra.startswith('#') and not re.search(signos,palabra) and palabra.islower()
+            palabra.lower() for palabra in texto.split()
+            if palabra.startswith('#') and not re.search(signos,palabra)
         ]
         return list(dict.fromkeys(hashtags))
 
