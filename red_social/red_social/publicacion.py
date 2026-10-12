@@ -1,13 +1,14 @@
 import re
 from abc import ABC, abstractmethod
 
-LIMITE_CARACTERES = 280
 
 class Publicacion(ABC):
 
+    LIMITE_CARACTERES = 280
+
     def __init__(self,autor,texto):
         self.autor = autor
-        if len(texto) > LIMITE_CARACTERES or len(texto.strip()) == 0:
+        if len(texto) > Publicacion.LIMITE_CARACTERES or len(texto.strip()) == 0:
             raise ValueError("Texto no valido")
         self.texto = texto
         self.me_gusta = 0
@@ -23,8 +24,8 @@ class Publicacion(ABC):
     def extraer_hashtags(texto):
         signos = r"[,.;:!?¡¿]"
         hashtags = [
-            palabra.lower() for palabra in texto.split()
-            if palabra.startswith('#') and not re.search(signos,palabra)
+            palabra.lower().rstrip(signos) for palabra in texto.split()
+            if palabra.startswith('#')
         ]
         return list(dict.fromkeys(hashtags))
 
