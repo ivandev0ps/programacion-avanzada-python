@@ -1,7 +1,9 @@
 import pytest
-from red_social.publicacion import Respuesta, Retweet, Tweet
+
+from red_social.publicacion import Tweet
 from red_social.red import RedSocial
 from red_social.usuario import Usuario
+
 
 @pytest.fixture
 def ana():

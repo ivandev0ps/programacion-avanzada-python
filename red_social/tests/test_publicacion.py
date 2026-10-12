@@ -1,6 +1,8 @@
-import pytest 
-from red_social.publicacion import Tweet,Retweet
+import pytest
+
+from red_social.publicacion import Retweet, Tweet
 from red_social.usuario import Usuario
+
 
 @pytest.mark.parametrize(   
     "texto",

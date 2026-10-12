@@ -1,5 +1,5 @@
-import pytest 
-from red_social.usuario import Usuario
+import pytest
+
 
 def test_seguir_anade_al_otro_usuario(ana,luis):
     ana.seguir(luis)
