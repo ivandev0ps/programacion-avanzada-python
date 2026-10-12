@@ -1,6 +1,8 @@
 import json
-from red_social.red import RedSocial
+
 from red_social.publicacion import Tweet
+from red_social.red import RedSocial
+
 
 def test_timeline_solo_tiene_publicaciones_de_los_seguidos(red):
     red.publicar(Tweet(red["@ana"],"Hola a todos #python #pytest"))
